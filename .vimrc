@@ -52,3 +52,30 @@ set number
 
 "show-cursor
 set cursorline
+
+"auto complete brackets, parens, curlies, quotes
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+
+"fix tabs, auto indent
+set expandtab
+set tabstop=4
+set autoindent
+set backspace=indent,eol,start
+set ruler
+set showcmd
+
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
+"get rid of swap files
+set nobackup
+set nowritebackup
+set noswapfile
